@@ -12,7 +12,7 @@ class TestCase {
 private:
 	int total, passed, failed;
 	string nameOfTest;
-	ostream& errorPrinter;
+	ostream errorPrinter;
 
 
 
