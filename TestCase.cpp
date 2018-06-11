@@ -1,10 +1,9 @@
 #include "TestCase.hpp"
 
-TestCase::TestCase(string name, ostream& cerr) : errorPrinter(cerr.rdbuf()) {
+TestCase::TestCase(string name, ostream& cerr) : errorPrinter(cerr) {
 	nameOfTest = name;
 	total = passed = failed = 0;
 }
-
 
 //print well known to return void but returning the object will allow a further test cases.
 TestCase& TestCase::print() {
