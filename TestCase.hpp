@@ -88,13 +88,5 @@ class TestCase{
             
             return *this;
         }
-        
-        
-        // TestCase& print(){
-            
-        //     c << _name << ": " << failed << " failed, " << passed << " passed, " << total << " total." << endl;
-        //     c << "---" << endl;
-        //     return *this;
-        // }
 };
 #endif
