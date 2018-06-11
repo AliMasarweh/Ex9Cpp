@@ -19,7 +19,9 @@ private:
 public:
 
 	TestCase(string name, ostream& cerr);
-	void print();
+	TestCase& print();
+
+	//every method of testing returns a the object itself , allowing the user to test a several cases in one statement
 
 	template <typename T> TestCase& check_equal(T object1, T object2) {
 
@@ -68,17 +70,17 @@ public:
 	}
 
 
-	template <typename T> TestCase& check_output(T object1, string str) {
+	template <typename T> TestCase& check_output(T object1, string expectedStr) {
 
 		total++;
 		ostringstream ss;
 		ss << object1;
 
-		if (ss.str() == str) {
+		if (ss.str() == expectedStr) {
 			passed++;
 		}
 		else {
-			errorPrinter << nameOfTest << ": Failure in test #" << total << ": string value should be " << str << " but is " << ss.str() << "!" << endl;
+			errorPrinter << nameOfTest << ": Failure in test #" << total << ": string value should be " << expectedStr << " but is " << ss.str() << "!" << endl;
 			failed++;
 		}
 
