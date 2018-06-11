@@ -1,12 +1,12 @@
 #include "TestCase.hpp"
 
-TestCase::TestCase(string name, ostream& c) : c(c.rdbuf()) {
-            _name = name;
-            total = passed = failed = 0;
+TestCase::TestCase(string name, ostream& cerr) : errorPrinter(cerr.rdbuf()) {
+	nameOfTest = name;
+	total = passed = failed = 0;
 }
 
-void TestCase::print(){
-    
-    c << _name << ": " << failed << " failed, " << passed << " passed, " << total << " total." << endl;
-    c << "---" << endl;
+void TestCase::print() {
+
+	errorPrinter << nameOfTest << ": " << failed << " failed, " << passed << " passed, " << total << " total." << endl;
+	errorPrinter << "---" << endl;
 }
