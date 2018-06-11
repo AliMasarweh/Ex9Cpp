@@ -51,10 +51,10 @@ public:
 		return *this;
 	}
 
-	template<typename Fun, typename T> TestCase& check_function(Fun func, const T object1, const int object2) {
+	template<typename Fun, typename Arg, typename Res> TestCase& check_function(Fun func, const Arg object1, const Res object2) {
 
 		total++;
-		int res = (*func)(object1);
+		Res res = (*func)(object1);
 
 		if (res == object2) {
 			passed++;
