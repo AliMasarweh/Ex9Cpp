@@ -55,10 +55,10 @@ public:
 	we need another tamplate variable in orfer to execute differents options on him.
 
 	*/
-	template<typename Fun, typename T> TestCase& check_function(Fun func, const T a, const int b) {
+	template<typename Fun, typename Arg, typename Res> TestCase& check_function(Fun func, const Arg a, Res b) {
 
 		total++;
-		int res = (*func)(a);
+		Res res = (*func)(a);
 
 		if (res == b) {
 			passed++;
