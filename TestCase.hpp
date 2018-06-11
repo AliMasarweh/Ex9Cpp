@@ -21,7 +21,7 @@ public:
 	TestCase(string name, ostream& cerr);
 	TestCase& print();
 
-	//every method of testing returns a the object itself , allowing the user to test a several cases in one statement
+	//every method of testing returns the object itself , allowing the user to test a several cases in one statement
 
 	template <typename T> TestCase& check_equal(T object1, T object2) {
 
