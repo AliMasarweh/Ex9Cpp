@@ -29,7 +29,8 @@ public:
 			passed++;
 		}
 		else {
-			errorPrinter << nameOfTest << ": Failure in test #" << total << ": " << object1 << " should equal " << object2 << "!" << endl;
+			errorPrinter << nameOfTest << ": Failure in test #" << total << ": " 
+				<< object1 << " should equal " << object2 << "!" << endl;
 			failed++;
 		}
 		return *this;
@@ -41,7 +42,8 @@ public:
 			passed++;
 		}
 		else {
-			errorPrinter << nameOfTest << ": Failure in test #" << total << ": " << object1 << " should not equal " << object2 << "!" << endl;
+			errorPrinter << nameOfTest << ": Failure in test #" << total << ": " 
+				<< object1 << " should not equal " << object2 << "!" << endl;
 			failed++;
 		}
 		return *this;
@@ -54,7 +56,8 @@ public:
 			passed++;
 		}
 		else {
-			errorPrinter << nameOfTest << ": Failure in test #" << total << ": Function should return " << object2 << " but returned " << res << "!" << endl;
+			errorPrinter << nameOfTest << ": Failure in test #" << total << 
+				": Function should return " << object2 << " but returned " << res << "!" << endl;
 			failed++;
 		}
 		return *this;
@@ -68,7 +71,8 @@ public:
 			passed++;
 		}
 		else {
-			errorPrinter << nameOfTest << ": Failure in test #" << total << ": string value should be " << expectedStr << " but is " << ss.str() << "!" << endl;
+			errorPrinter << nameOfTest << ": Failure in test #" << total <<
+				": string value should be " << expectedStr << " but is " << ss.str() << "!" << endl;
 			failed++;
 		}
 		return *this;
