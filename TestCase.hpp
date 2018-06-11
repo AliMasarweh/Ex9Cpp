@@ -12,14 +12,16 @@ class TestCase {
 private:
 	int total, passed, failed;
 	string nameOfTest;
-	/*error printer should point to a cerr, Taking advantage of the property delivering
+	/*Error printer should point to a cerr, Taking advantage of the property delivering
 	 *messages & information without effecting the output file
 	 */
 	ostream& errorPrinter;
 public:
 	TestCase(string name, ostream& cerr);
 	TestCase& print();
-	//every method of testing returns the object itself , allowing the user to test a several cases in one statement
+	/*Every method of testing returns the object itself , allowing the user
+	 *to test a several cases in one statement, also they are all implemented
+	 *because it's easier for the complier this way*/
 
 	template<typename T> TestCase& check_equal(T object1, T object2) {
 		total++;
