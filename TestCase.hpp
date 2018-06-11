@@ -12,6 +12,9 @@ class TestCase {
 private:
 	int total, passed, failed;
 	string nameOfTest;
+	/*error printer should point to a cerr, Taking advantage of the property delivering
+	 *messages & information without effecting the output file
+	 */
 	ostream& errorPrinter;
 public:
 	TestCase(string name, ostream& cerr);
